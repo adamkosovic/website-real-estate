@@ -1,15 +1,17 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ transparent = false }) => {
   return (
     <nav
       style={{
-        backgroundColor: "white",
-        boxShadow:
-          "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        backgroundColor: transparent ? "transparent" : "white",
+        boxShadow: transparent
+          ? "none"
+          : "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
         padding: "1rem 0",
-        margin: "1rem 1rem",
-        borderRadius: "0.5rem",
+        margin: transparent ? "0" : "1rem 1rem",
+        borderRadius: transparent ? "0" : "0.5rem",
+        fontFamily: "Arial, sans-serif",
       }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
@@ -26,7 +28,7 @@ const Navbar = () => {
               style={{
                 fontSize: "1.5rem",
                 fontWeight: "bold",
-                color: "#2563eb",
+                color: transparent ? "white" : "#2563eb",
               }}
             >
               Real Estate
@@ -45,11 +47,12 @@ const Navbar = () => {
             <a
               href="#"
               style={{
-                color: "#374151",
+                color: transparent ? "white" : "#374151",
                 padding: "0.5rem 0.75rem",
                 borderRadius: "0.375rem",
                 fontSize: "0.875rem",
                 fontWeight: "500",
+                textDecoration: "none",
               }}
             >
               Home
@@ -57,11 +60,12 @@ const Navbar = () => {
             <a
               href="#"
               style={{
-                color: "#374151",
+                color: transparent ? "white" : "#374151",
                 padding: "0.5rem 0.75rem",
                 borderRadius: "0.375rem",
                 fontSize: "0.875rem",
                 fontWeight: "500",
+                textDecoration: "none",
               }}
             >
               About
@@ -69,11 +73,12 @@ const Navbar = () => {
             <a
               href="#"
               style={{
-                color: "#374151",
+                color: transparent ? "white" : "#374151",
                 padding: "0.5rem 0.75rem",
                 borderRadius: "0.375rem",
                 fontSize: "0.875rem",
                 fontWeight: "500",
+                textDecoration: "none",
               }}
             >
               Projects
@@ -81,11 +86,12 @@ const Navbar = () => {
             <a
               href="#"
               style={{
-                color: "#374151",
+                color: transparent ? "white" : "#374151",
                 padding: "0.5rem 0.75rem",
                 borderRadius: "0.375rem",
                 fontSize: "0.875rem",
                 fontWeight: "500",
+                textDecoration: "none",
               }}
             >
               Testimonials
@@ -103,14 +109,19 @@ const Navbar = () => {
           >
             <button
               style={{
-                backgroundColor: "#2563eb",
-                color: "white",
+                backgroundColor: transparent ? "transparent" : "white",
+                color: transparent ? "white" : "black",
                 fontWeight: "500",
-                padding: "0.5rem 1rem",
-                borderRadius: "0.375rem",
+                padding: "0.4rem 1rem",
+                borderRadius: "0.5rem",
                 fontSize: "0.875rem",
-                border: "none",
+                border: transparent ? "2px solid white" : "1px solid #e5e7eb",
                 cursor: "pointer",
+                boxShadow: transparent
+                  ? "none"
+                  : "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                minWidth: "100px",
+                textAlign: "center",
               }}
             >
               Sign up
