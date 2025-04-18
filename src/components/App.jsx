@@ -1,7 +1,11 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
+import Customer from "./Customer";
+import Contact from "./Contact";
+import Footer from "./Footer";
 import headerImage from "../assets/images/header.jpg";
 
 const App = () => {
@@ -107,6 +111,15 @@ const App = () => {
 
       {/* Projects Section */}
       <Projects />
+
+      {/* Customer Section */}
+      <Customer />
+
+      {/* Contact Section */}
+      <Contact />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
